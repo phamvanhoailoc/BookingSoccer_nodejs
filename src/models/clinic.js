@@ -23,7 +23,7 @@ module.exports = (sequelize, DataTypes) => {
     address: DataTypes.STRING,
     description: DataTypes.TEXT,
     area: DataTypes.STRING,
-    image: DataTypes.STRING,   
+    image: DataTypes.BLOB('long'),   
   }, {
     sequelize,
     modelName: 'Clinic',

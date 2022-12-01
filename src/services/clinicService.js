@@ -95,7 +95,7 @@ let bulkCreateSchedule = async(data) =>{
     
                 }
                 let existing = await db.Schedule.findAll({
-                    where: { doctorId: data.doctorId, date: data.formatedDate},
+                    where: { doctorId: data.doctorId, date:''+ data.formatedDate},
                     attributes: ['timeType','date', 'doctorId', 'maxNumber'],
                     raw: true
                 });
@@ -209,7 +209,7 @@ let getAllDetailClinic = async(inputId) =>{
             }else{
                 let data = await db.Clinic.findOne({
                     where:{
-                        id: inputId,
+                        id: +inputId,
                     },
                     attributes:{
                         

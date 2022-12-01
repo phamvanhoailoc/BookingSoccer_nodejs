@@ -41,7 +41,7 @@ let getAllUser = () => {
             let users = db.User.findAll({
                 raw: true,
             });
-            resolve(users);
+            resolve({});
         }catch(e) {
             reject(e);
         }

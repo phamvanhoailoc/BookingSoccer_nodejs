@@ -18,7 +18,7 @@ module.exports = {
         type: Sequelize.TEXT('long')
       },  
       ClinicId: {
-        type: Sequelize.STRING
+        type: Sequelize.INTEGER
       },
       specialtyId: {
         type: Sequelize.INTEGER
